@@ -72,7 +72,7 @@ ${admin ? '<meta name="robots" content="noindex">' : ""}
 </head>
 <body data-base="${base}"${admin ? ' class="admin"' : ""}>
 <header class="site-header">
-  <a class="brand" href="${base}"><img src="${base}icon.svg" alt="" width="28" height="28"><span>Best Near Me</span></a>
+  <a class="brand" href="${base}"><img src="${base}icon.svg" alt="" width="28" height="28"><span>Roamtable</span></a>
 </header>
 <main>
 ${body}
@@ -111,7 +111,7 @@ function homePage(base) {
     .join("");
   return layout({
     base,
-    title: "Best Near Me — the restaurants worth knowing",
+    title: "Roamtable — the restaurants worth knowing",
     description: "Ten carefully selected restaurants in destinations you may not know well.",
     body: `
 <section class="hero">
@@ -159,7 +159,7 @@ function cityPage(slug, base) {
     : `Restaurants Worth Knowing in ${city.name}`;
   return layout({
     base,
-    title: `${heading} — Best Near Me`,
+    title: `${heading} — Roamtable`,
     description: `A short list of restaurants worth knowing in ${city.name}, ${city.state}.`,
     body: `
 <section class="city-header" data-city="${esc(city.slug)}">
@@ -202,7 +202,7 @@ function adminHome(base) {
   return layout({
     base,
     admin: true,
-    title: "Admin — Best Near Me",
+    title: "Admin — Roamtable",
     description: "Internal",
     body: `
 <h1>Admin</h1>
@@ -350,7 +350,7 @@ function sendHtml(res, html, status = 200) {
 function notFoundPage(base) {
   return layout({
     base,
-    title: "Not found — Best Near Me",
+    title: "Not found — Roamtable",
     description: "Page not found",
     body: `<section class="city-header"><h1>Page not found</h1><p><a href="${base}">See all destinations</a></p></section>`,
   });
@@ -412,5 +412,5 @@ const server = createServer(async (req, res) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`best-near-me listening on http://${HOST}:${PORT}`);
+  console.log(`roamtable listening on http://${HOST}:${PORT}`);
 });

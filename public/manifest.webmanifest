@@ -1,6 +1,6 @@
 {
-  "name": "Best Near Me",
-  "short_name": "Best Near Me",
+  "name": "Roamtable",
+  "short_name": "Roamtable",
   "description": "Top-rated restaurants near you, ranked by reviews and rating.",
   "start_url": "./",
   "scope": "./",
