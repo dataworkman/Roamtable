@@ -1,0 +1,36 @@
+[
+  { "name": "Charleston", "state": "SC", "centers": [{ "lat": 32.7765, "lng": -79.9311, "radius": 6000 }] },
+  { "name": "Savannah", "state": "GA", "centers": [{ "lat": 32.0809, "lng": -81.0912, "radius": 5000 }] },
+  { "name": "Santa Fe", "state": "NM", "centers": [{ "lat": 35.687, "lng": -105.9378, "radius": 5000 }] },
+  { "name": "St. Augustine", "state": "FL", "centers": [{ "lat": 29.8947, "lng": -81.3145, "radius": 5000 }] },
+  { "name": "Asheville", "state": "NC", "centers": [{ "lat": 35.5951, "lng": -82.5515, "radius": 6000 }] },
+  { "name": "Sedona", "state": "AZ", "centers": [{ "lat": 34.8697, "lng": -111.761, "radius": 6000 }] },
+  { "name": "Key West", "state": "FL", "centers": [{ "lat": 24.5551, "lng": -81.78, "radius": 4000 }] },
+  { "name": "Napa", "state": "CA", "centers": [{ "lat": 38.2975, "lng": -122.2869, "radius": 5000 }] },
+  {
+    "name": "Gatlinburg / Pigeon Forge",
+    "state": "TN",
+    "centers": [
+      { "lat": 35.7143, "lng": -83.5102, "radius": 4000 },
+      { "lat": 35.7884, "lng": -83.5543, "radius": 5000 }
+    ]
+  },
+  { "name": "Alexandria", "state": "VA", "centers": [{ "lat": 38.8048, "lng": -77.0469, "radius": 4000 }] },
+  { "name": "Greenville", "state": "SC", "centers": [{ "lat": 34.8526, "lng": -82.394, "radius": 5000 }] },
+  {
+    "name": "Monterey / Carmel",
+    "state": "CA",
+    "centers": [
+      { "lat": 36.6002, "lng": -121.8947, "radius": 4000 },
+      { "lat": 36.5552, "lng": -121.9233, "radius": 3000 }
+    ]
+  },
+  { "name": "Santa Barbara", "state": "CA", "centers": [{ "lat": 34.4208, "lng": -119.6982, "radius": 5000 }] },
+  { "name": "Newport", "state": "RI", "centers": [{ "lat": 41.4901, "lng": -71.3128, "radius": 4000 }] },
+  { "name": "Portland", "state": "ME", "centers": [{ "lat": 43.6591, "lng": -70.2568, "radius": 4000 }] },
+  { "name": "Sarasota", "state": "FL", "centers": [{ "lat": 27.3364, "lng": -82.5307, "radius": 6000 }] },
+  { "name": "Naples", "state": "FL", "centers": [{ "lat": 26.142, "lng": -81.7948, "radius": 6000 }] },
+  { "name": "Park City", "state": "UT", "centers": [{ "lat": 40.6461, "lng": -111.498, "radius": 5000 }] },
+  { "name": "Taos", "state": "NM", "centers": [{ "lat": 36.4072, "lng": -105.5731, "radius": 5000 }] },
+  { "name": "Healdsburg", "state": "CA", "centers": [{ "lat": 38.6105, "lng": -122.8692, "radius": 3000 }] }
+]

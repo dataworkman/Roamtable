@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#2D1206" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Best Near Me" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icon-180.png" />
+    <link rel="icon" type="image/svg+xml" href="./icon.svg" />
+    <title>Best Near Me</title>
+    <script type="module" crossorigin src="./assets/app.js?v=3"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-whRe8u3Q.css?v=3">
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header-inner">
+        <div class="app-brand">
+          <svg class="app-logo" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#FF8255"/>
+                <stop offset="100%" stop-color="#C03010"/>
+              </linearGradient>
+            </defs>
+            <!-- Rounded square bg -->
+            <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+            <!-- Inner border ring -->
+            <rect x="2.5" y="2.5" width="35" height="35" rx="8" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+            <!-- Fork: 3 tines -->
+            <rect x="10" y="7" width="2" height="7.5" rx="1" fill="white"/>
+            <rect x="13" y="7" width="2" height="7.5" rx="1" fill="white"/>
+            <rect x="16" y="7" width="2" height="7.5" rx="1" fill="white"/>
+            <!-- Fork neck (tines converge) -->
+            <path d="M10 14 Q10 17.5 14 17.5 Q18 17.5 18 14" fill="white"/>
+            <!-- Fork handle -->
+            <rect x="13" y="17" width="2" height="16" rx="1" fill="white"/>
+            <!-- Knife blade (tapered top) -->
+            <path d="M24.5 7 C27.5 7 27.5 8 27.5 15 L24.5 15 Z" fill="white"/>
+            <!-- Bolster -->
+            <rect x="24" y="14.5" width="4" height="2" rx="1" fill="rgba(255,255,255,0.55)"/>
+            <!-- Knife handle -->
+            <rect x="24.5" y="16" width="3" height="17" rx="1.5" fill="white"/>
+            <!-- Star accent top-right -->
+            <polygon points="35,5.5 35.85,7.9 38.4,7.9 36.4,9.4 37.2,11.8 35,10.3 32.8,11.8 33.6,9.4 31.6,7.9 34.15,7.9" fill="rgba(255,255,255,0.9)"/>
+          </svg>
+          <div>
+            <h1 class="app-title">Best Near Me</h1>
+            <p class="app-location" id="basisLabel">Getting location…</p>
+          </div>
+        </div>
+        <span id="statusPill" class="sr-only"></span>
+      </div>
+    </header>
+
+    <div class="controls-bar">
+      <div class="controls-inner">
+        <div id="autocompleteMount" class="autocomplete-mount"></div>
+        <div class="filter-row">
+          <div class="radius-tabs" role="group" aria-label="Search radius">
+            <button class="radius-tab" data-radius-key="1">1 mi</button>
+            <button class="radius-tab" data-radius-key="3">3 mi</button>
+            <button class="radius-tab active" data-radius-key="5">5 mi</button>
+            <button class="radius-tab" data-radius-key="10">10 mi</button>
+          </div>
+          <button class="chain-btn" id="franchiseToggle">Chains: On</button>
+        </div>
+      </div>
+    </div>
+
+    <main class="app-main">
+      <section class="results-wrap">
+        <div class="results-meta">
+          <h2 class="section-title" id="resultTitle">Nearby Restaurants</h2>
+          <span class="results-count" id="resultCount"></span>
+        </div>
+        <p class="score-note">Ranked by reviews 60% · rating 40%</p>
+        <div id="resultList" class="result-list"></div>
+      </section>
+
+      <section class="detail-wrap" id="detailsPanel">
+        <div class="detail-header-row">
+          <h2 class="section-title">Details</h2>
+          <a id="mapsLink" class="maps-btn" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Open in Maps</a>
+        </div>
+        <p id="detailsEmpty" class="detail-empty">Select a restaurant to see details</p>
+        <div id="detailsContent" hidden></div>
+      </section>
+    </main>
+
+  </body>
+</html>

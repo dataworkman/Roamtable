@@ -1,0 +1,27 @@
+{
+  "ranking": {
+    "review_volume_weight": 0.6,
+    "rating_weight": 0.4,
+    "exclude_national_chains": true,
+    "chain_penalty": 0.2,
+    "minimum_reviews": 100,
+    "rating_floor": 4.0,
+    "rating_prior_reviews": 200,
+    "review_reference_percentile": 0.9
+  },
+  "selection": {
+    "top_public": 10,
+    "top_internal": 20,
+    "candidates_stored": 30
+  },
+  "api": {
+    "monthly_budget_usd": 20,
+    "estimated_cost_usd": {
+      "nearby_search": 0.035,
+      "place_photo": 0.007
+    }
+  },
+  "storage": {
+    "store_raw_google_inputs": false
+  }
+}

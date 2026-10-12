@@ -1,0 +1,345 @@
+:root {
+  --primary: #c8481f;
+  --primary-soft: #fff1ea;
+  --bg: #fffaf5;
+  --card: #ffffff;
+  --header-bg: #2d1206;
+  --text: #2c1503;
+  --muted: #7d6353;
+  --border: #ecdfd6;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+}
+
+a {
+  color: var(--primary);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.site-header {
+  background: var(--header-bg);
+  padding: calc(12px + env(safe-area-inset-top)) 16px 12px;
+}
+
+.brand {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.brand img {
+  border-radius: 7px;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Home */
+
+.hero {
+  padding: 40px 0 24px;
+}
+
+.hero h1,
+.city-header h1 {
+  font-size: clamp(1.7rem, 6vw, 2.3rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+.hero p,
+.city-header p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.search {
+  width: 100%;
+  margin-top: 24px;
+  padding: 13px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search:focus {
+  border-color: var(--primary);
+}
+
+.destination-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.destination a {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  height: 100%;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+}
+
+.destination a:hover {
+  border-color: var(--primary);
+}
+
+.destination-name {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.destination-meta {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.notice {
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Destination page */
+
+.city-header {
+  padding: 28px 0 24px;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.restaurant-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.restaurant {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.restaurant-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--primary-soft);
+}
+
+.restaurant-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.restaurant h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.rank {
+  color: var(--primary);
+  margin-right: 4px;
+}
+
+.description {
+  font-size: 0.95rem;
+}
+
+.try {
+  font-size: 0.9rem;
+}
+
+.try span {
+  font-weight: 700;
+}
+
+.location {
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.button {
+  display: inline-block;
+  padding: 9px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.verified {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* Admin */
+
+.admin main {
+  max-width: 860px;
+  padding-top: 24px;
+}
+
+.admin h1 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.admin h2 {
+  font-size: 1.05rem;
+  margin: 28px 0 8px;
+}
+
+.admin table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  background: var(--card);
+}
+
+.admin th,
+.admin td {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.candidate {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 14px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.candidate.listed {
+  border-left: 4px solid var(--primary);
+}
+
+.candidate-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.candidate-head strong {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.candidate label {
+  display: grid;
+  gap: 3px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.candidate label.check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.candidate input:not([type="checkbox"]),
+.candidate textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.candidate button {
+  justify-self: start;
+}

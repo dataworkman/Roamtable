@@ -1,0 +1,8 @@
+# Secrets
+.env
+
+# Runtime database (Google-derived data, analytics and API usage logs)
+data/*.sqlite
+data/*.sqlite-*
+
+node_modules/
